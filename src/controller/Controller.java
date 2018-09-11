@@ -11,7 +11,7 @@ public class Controller
 	//Constructors initialize data members
 	public Controller()
 	{
-		myMonster = new MarshmallowMonster("Jeef");
+		myMonster = new MarshmallowMonster("Jeef", 1.141213562373, 3, false, 1);
 	}
 	
 	
@@ -19,4 +19,5 @@ public class Controller
 	{
 		System.out.println(myMonster);
 	}
+	
 }

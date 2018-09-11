@@ -21,11 +21,23 @@ public class MarshmallowMonster
 		this.name = name;
 	}
 	
+	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms)
+	{
+		this.name = name;
+		this.legCount = legCount;
+		this.eyeCount = eyeCount;
+		this.hasNoses = hasNose;
+		this.armCount = arms;
+	}
 	
 	
 	public String toString()
 	{
-		String description = "";
+		String description = "This monster is named " + name 
+							+ " and is has " + legCount + "legs. Jeef has "  
+							+ armCount + "arms. He has a nice face with " + eyeCount 
+							+ " eyes and has a " + hasNoses + " nose. He likes to say: My name is Jeff "
+							+ "(even though his name is Jeef)";
 		
 		return description;
 	}
