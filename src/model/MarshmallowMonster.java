@@ -55,6 +55,30 @@ public class MarshmallowMonster
 		return armCount;
 	}
 	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setLegCount(double legCount)
+	{
+		this.legCount = legCount;
+	}
+	
+	public void setEyeCount(int eyeCount)
+	{
+		this.eyeCount = eyeCount;
+	}
+	
+	public void setHasNoses(boolean hasNoses)
+	{
+		this.hasNoses = hasNoses;
+	}
+	
+	public void setArmCount(int armCount)
+	{
+		this.armCount = armCount;
+	}
 	
 	public String toString()
 	{
