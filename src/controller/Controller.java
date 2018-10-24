@@ -1,7 +1,9 @@
 package controller;
 
 import model.MarshmallowMonster;
+
 //import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 
@@ -11,7 +13,7 @@ public class Controller
 	//Declaration section
 	//private MarshmallowMonster myMonster;
 	private MarshmallowMonster userMonster;
-
+	public String conditionalMessage;
 	
 	//Constructors initialize data members
 	public Controller()
@@ -68,20 +70,21 @@ public class Controller
 		
 		String userInput2 = JOptionPane.showInputDialog(null, "How many legs does your monster have?");
 		double legs = 2.2;
-		if (validDouble(userInput2))
+		if (validInt(userInput2))
 		{
 			legs = Integer.parseInt(userInput2);
 		}
-		
+		conditionalMessage = "hmmmm";
 		if(legs >= 100)
 		{
-			String conditionalMessage = "Wow, your monster must be great at charades!";
+			conditionalMessage = "Wow, your monster must be great at charades!";
 		}
 		else 
 		{
-			String conditionalMessage = "That is very sensible";
+			conditionalMessage = "That is very sensible";
 		}
-		JOtionPane.showMessageDialog(null, "Your monster has" + userMonster.getArmCount() + ". " + conditionalMessage);
+		
+		JOptionPane.showMessageDialog(null, "Your monster has " + userMonster.getLegCount() + " legs. " + conditionalMessage);
 		
 		userMonster.setLegCount(legs);
 		//System.out.println("Your monster has " + userMonster.getLegCount() + " legs");
@@ -96,21 +99,40 @@ public class Controller
 			eyes = Integer.parseInt(userInput3);
 		}
 		
-		
 		userMonster.setEyeCount(eyes);
 		
-		//System.out.println("Your monster has" + userMonster.getEyeCount() + " eyes");
+		if(eyes == 3)
+		{
+			JOptionPane.showMessageDialog(null, "Your monster has 3 eyes, but the third eye is blind.");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Your monster has " + userMonster.getEyeCount() + " eyes.");
+		}
 		
+		
+		//System.out.println("Your monster has" + userMonster.getEyeCount() + " eyes");
 		
 		
 		String userInput5 = JOptionPane.showInputDialog(null, "Is it true or false that your monster has a nose?");
 		boolean nose = false;
 		nose = Boolean.parseBoolean(userInput5);
 		userMonster.setHasNoses(nose);
+		
+		if(!nose)
+		{
+			JOptionPane.showMessageDialog(null, "Your monster is a noseless freak.");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "Hmmmm, this ain't it chief.");
+		}
+		
 		//System.out.println("Your monster has a " + userMonster.getEyeCount() + " nose");
 		
 			
 	}
+	
 	
 	public boolean validInt(String maybeInt)
 	{

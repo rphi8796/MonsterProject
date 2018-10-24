@@ -16,10 +16,6 @@ public class MarshmallowMonster
 		//Generally boring and no as helpful
 	}
 	
-	public MarshmallowMonster(String name)
-	{
-		this.name = name;
-	}
 	
 	public MarshmallowMonster(String name, double legCount, int eyeCount, boolean hasNose, int arms)
 	{
